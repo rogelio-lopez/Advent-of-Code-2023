@@ -14,21 +14,22 @@ const dict = {
 fs.readFile('test2.txt', 'utf-8', (err, data) => {
   if (err) throw err;
 
+  let charArr = [];
   let dataArr = data.split('\n');
   dataArr = dataArr.slice(0, dataArr.length - 1);
 
+  // replace word with nums
   dataArr.forEach(n => {
 
+    for (let i = 2; i < n.length; i++) {
+      if ()
+    }
+
+
     for (let [w, val] of Object.entries(dict)) {
-      if (n.indexOf(w)) {
-        n = n.replace(w, val);
-      }
+      n = n.replaceAll(w, val);
       console.log(n);
     }
-    /*
-        n.forEach(m => {
-    
-        });*/
   });
-  console.log(data);
+  //console.log(data);
 });
